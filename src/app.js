@@ -3,8 +3,8 @@ import express, {json} from 'express';
 import morgan from 'morgan';
 
 //Importing route
-import projectRoutes from './routes/projects';
-import taskRoutes from './routes/tasks';
+import personaRoutes from './routes/personas';
+import rolRoutes from './routes/roles';
 
 
 //Initializations
@@ -16,8 +16,8 @@ app.use(morgan('dev')); //visualizar peticiones al servidor
 app.use(json()); //entiene los archivos en formato json
 
 //routes
-app.use('api/projects' ,projectRoutes);
-app.use('api/tasks' ,taskRoutes);
+app.use('/api/personas' ,personaRoutes);
+app.use('/api/roles' ,rolRoutes);
 
 export default app;
  
